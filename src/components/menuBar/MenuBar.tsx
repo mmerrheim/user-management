@@ -5,6 +5,7 @@ import logo from '../../logo.svg';
 
 
 import './MenuBar.scss';
+import UserPage from '../page/UserPage';
 
 const MenuBar = () => (
     <Router>
@@ -17,16 +18,16 @@ const MenuBar = () => (
                     <Link to="/" className="MenuBar-list--li-link">Home</Link>
                 </li>
                 <li className="MenuBar-list--li">
-                    <Link to="/create-collab" className="MenuBar-list--li-link">Create Collab</Link>
+                    <Link to="/create-collab" className="MenuBar-list--li-link">Create Collaborator</Link>
                 </li>
                 <li className="MenuBar-list--li">
-                    <Link  to="/collabs" className="MenuBar-list--li-link">Collabs</Link>
+                    <Link  to="/collabs" className="MenuBar-list--li-link">Manage Collaborators</Link>
                 </li>
             </ul>
             <div className="MenuBar-display">
                 <Route exact={true} path="/" component={Home} />
-                <Route path="/create-collab" component={Home2} />
-                <Route path="/collabs" component={Home} />
+                <Route path="/create-collab" component={UserPage} />
+                <Route path="/collabs" component={Home2} />
             </div>
         </div>
     </Router>
@@ -34,14 +35,14 @@ const MenuBar = () => (
 
 const Home = () => (
     <Paper>
-        <h1>Ceci est un test</h1>
+        <h1>Home</h1>
         <p>Test d'affichage du paper, on devrait avoir un truc plutôt propre normalement</p>
     </Paper>
 )
 
 const Home2 = () => (
     <Paper>
-        <h1>Ceci est un test2</h1>
+        <h1>Manage Collaborators</h1>
         <p>Test d'affichage du paper, on devrait avoir un truc plutôt propre normalement</p>
     </Paper>
 )

@@ -5,7 +5,7 @@ interface IProps {
   label: string;
   placeholder?: string;
   value: string;
-  onChange: (fieldName: string, value: string) => void;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   error?: string;
 }
 
@@ -19,7 +19,7 @@ const Input: React.SFC<IProps> = (props: IProps) => {
           className="form-control"
           placeholder={props.placeholder}
           value={props.value}
-          onChange={onChangeInput(props)}
+          onChange={props.onChange}
         />
       </div>
       <div className="help-block">{props.error}</div>
@@ -33,10 +33,6 @@ const formatWrapperClass = (props: IProps) => {
   return props.error ?
     `${wrapperClass} has-error` :
     wrapperClass;
-};
-
-const onChangeInput = (props: IProps) => (e: React.ChangeEvent<HTMLInputElement>) => {
-  props.onChange(e.target.name, e.target.value);
 };
 
 export default Input;

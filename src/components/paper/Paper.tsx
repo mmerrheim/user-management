@@ -7,7 +7,7 @@ const Paper: React.SFC = ({
 }) => {
     return (
         <div className="Paper">
-            {children}
+            <div className="Paper-children">{children}</div>
         </div>
     );
 }

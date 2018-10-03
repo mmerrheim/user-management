@@ -1,0 +1,32 @@
+import * as React from 'react';
+import Button from './Button';
+import Input from './Input';
+
+interface IProps {
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onSave: () => void;
+}
+
+const UserForm: React.SFC<IProps> = (props) => {
+  return (
+    <div>
+      <h1>Create Collaborator</h1>
+      <hr/>
+      <form>
+        <Input
+          name="username"
+          label="Username"
+          value={props.value}
+          onChange={props.onChange}
+        />
+        <Button
+          label="Save"
+          className="btn btn-default"
+          onClick={props.onSave}
+        />
+      </form>
+    </div>  );
+};
+
+export default UserForm;

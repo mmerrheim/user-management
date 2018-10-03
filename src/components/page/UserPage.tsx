@@ -1,21 +1,29 @@
 import * as React from 'react';
-import { IUserEntity } from '../../model/userEntity';
-import UserForm from '../UserForm';
+import Paper from '../paper/Paper';
+import UserForm from '../form/UserForm';
 
-interface Props {
-  member: IUserEntity;
-  onChange: (fieldName: string, value: string) => void;
-  onSave: () => void;
+export default class UserPage extends React.Component {
+
+  public state = {
+    value: '',
+  }
+
+  public onChange = (e: React.ChangeEvent<HTMLInputElement>) => this.setState({value: e.target.value});
+
+  // public onSave() {
+  // }
+
+  public render() {
+    return (
+      <Paper>
+        <UserForm
+          value={this.state.value}
+          onChange={this.onChange}
+          // tslint:disable-next-line:jsx-no-lambda
+          onSave={() => null}
+        />
+        <p>{this.state.value}</p>
+      </Paper>
+    );
+  }
 }
-
-const UserPage: React.StatelessComponent<Props> = (props) => {
-  return (
-    <UserForm
-      member={props.member}
-      onChange={props.onChange}
-      onSave={props.onSave}
-    />
-  );
-}
-
-export default UserPage;
