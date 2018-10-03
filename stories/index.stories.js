@@ -5,6 +5,7 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
+import Paper from '../src/components/paper/Paper';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -22,3 +23,10 @@ storiesOf('Button', module)
       </span>
     </Button>
   ));
+
+  storiesOf('Paper', () => (
+    <Paper>
+      <h1>Ceci est un test</h1>
+      <p>Test d'affichage du paper, on devrait avoir un truc plutôt propre normalement</p>
+    </Paper>
+  ))
