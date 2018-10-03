@@ -16,7 +16,7 @@ const UserForm: React.SFC<IProps> = (props) => {
 
       <Input
         name="username"
-        label="Usernname"
+        label="Username"
         value={props.member.username}
         onChange={props.onChange}
       />
