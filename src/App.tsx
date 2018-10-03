@@ -1,17 +1,14 @@
 import * as React from 'react';
-import './App.css';
+import './App.scss';
 
 // import logo from './logo.svg';
-import Paper from './components/paper/Paper';
+import MenuBar from './components/menuBar/MenuBar';
 
 class App extends React.Component {
   public render() {
     return (
       <div className="App">
-        <Paper>
-          <h1>Ceci est un test</h1>
-          <p>Test d'affichage du paper, on devrait avoir un truc plutôt propre normalement</p>
-        </Paper>
+        <MenuBar />
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
