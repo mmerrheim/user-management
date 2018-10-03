@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Link, Route} from 'react-router-dom';
 import Paper from '../paper/Paper';
+import logo from '../../logo.svg';
+
 
 import './MenuBar.scss';
 
@@ -8,14 +10,17 @@ const MenuBar = () => (
     <Router>
         <div className="MenuBar">
             <ul className="MenuBar-list">
-                <li>
-                    <Link to="/">Home</Link>
+                <li className="MenuBar-list--li">
+                    <img src={logo} className="MenuBar-list--li-logo" alt="logo" />
                 </li>
-                <li>
-                    <Link to="/create-collab">Create Collab</Link>
+                <li className="MenuBar-list--li">
+                    <Link to="/" className="MenuBar-list--li-link">Home</Link>
                 </li>
-                <li>
-                    <Link to="/collabs">Collabs</Link>
+                <li className="MenuBar-list--li">
+                    <Link to="/create-collab" className="MenuBar-list--li-link">Create Collab</Link>
+                </li>
+                <li className="MenuBar-list--li">
+                    <Link  to="/collabs" className="MenuBar-list--li-link">Collabs</Link>
                 </li>
             </ul>
             <div className="MenuBar-display">
