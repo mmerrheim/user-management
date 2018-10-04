@@ -16,7 +16,7 @@ export interface IUserEntity {
   service: IService;
 }
 
-export interface IProjet {
+export interface IProject {
   id: number;
   name: string;
 }
@@ -24,7 +24,7 @@ export interface IProjet {
 export interface ITeamEntity {
   id: number;
   users: IUserEntity[];
-  projet: IProjet;
+  project: IProject;
 }
 
 
