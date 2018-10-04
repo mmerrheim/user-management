@@ -15,13 +15,13 @@ const MenuBar = () => (
                     <img src={logo} className="MenuBar-list--li-logo" alt="logo" />
                 </li>
                 <li className="MenuBar-list--li">
-                    <Link to="/" className="MenuBar-list--li-link">Home</Link>
+                    <Link to="/" className="MenuBar-list--li-link"><i className="icon-home3"/> Home</Link>
                 </li>
                 <li className="MenuBar-list--li">
-                    <Link to="/create-collab" className="MenuBar-list--li-link">Create Collaborator</Link>
+                    <Link to="/create-collab" className="MenuBar-list--li-link"><i className="icon-user-plus"/> Create Collaborator</Link>
                 </li>
                 <li className="MenuBar-list--li">
-                    <Link  to="/collabs" className="MenuBar-list--li-link">Manage Collaborators</Link>
+                    <Link  to="/collabs" className="MenuBar-list--li-link"><i className="icon-users"/> Manage Collaborators</Link>
                 </li>
             </ul>
             <div className="MenuBar-display">
