@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Button from '../../../form/Button';
-import Input from '../../../form/Input';
+import Button from '../../../common/Button';
+import Input from '../../../common/Input';
 
 interface IProps {
   value: string;

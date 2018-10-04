@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Link, Route} from 'react-router-dom';
-import Paper from '../paper/Paper';
+import Paper from '../common/Paper';
 import logo from '../../logo.svg';
 
 
