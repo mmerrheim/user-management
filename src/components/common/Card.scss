@@ -1,5 +1,7 @@
 .Card {
-    width: 500px;
+    width: 200px;
+    border: .5px solid rgba(0, 0, 0, .3);
+    box-shadow: 4px 4px 2px rgba(0, 0, 0, .2);
     &-children {
         padding: 10px 15px;
     }

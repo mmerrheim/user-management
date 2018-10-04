@@ -1,0 +1,20 @@
+.IconButton {
+    border: 2px solid black;
+    color: black;
+    width: auto;
+    display: flex;
+    border-radius: 50%;
+    transition: ease .3s;
+    background-color: white;
+    &-icon {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+    &:hover {
+        background-color: #eee;
+        cursor: pointer;
+    }
+    &:active {
+        background-color: #dddddd;
+    }
+}

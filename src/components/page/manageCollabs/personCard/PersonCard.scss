@@ -1,0 +1,26 @@
+.PersonCard {
+    &--person{
+        position: relative;
+        border-bottom: 1px solid black;
+        // &-name {
+        // }
+        &-age {
+            position: absolute;
+            right: 0;
+        }
+    }
+    &--role {
+        position: relative;
+        &-name {
+            position: absolute;
+            right: 0;
+        }
+    }
+    &--service {
+        position: relative;
+        &-name {
+            position: absolute;
+            right: 0;
+        }
+    }
+}
