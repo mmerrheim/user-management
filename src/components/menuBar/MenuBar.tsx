@@ -5,7 +5,7 @@ import logo from '../../logo.svg';
 
 
 import './MenuBar.scss';
-import UserPage from '../page/UserPage';
+import UserPage from '../page/userPage/UserPage';
 
 const MenuBar = () => (
     <Router>

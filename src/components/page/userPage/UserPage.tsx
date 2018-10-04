@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Paper from '../paper/Paper';
-import UserForm from '../form/UserForm';
+import Paper from '../../paper/Paper';
+import UserForm from './userForm/UserForm';
 
 export default class UserPage extends React.Component {
 
