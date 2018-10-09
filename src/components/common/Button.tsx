@@ -2,7 +2,7 @@ import * as React from 'react';
 
 interface IProps {
   label: string;
-  className: string;
+  className?: string;
   onClick: () => void;
 }
 

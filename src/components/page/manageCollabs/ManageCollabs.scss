@@ -3,7 +3,21 @@
     &--plus {
         position: absolute;
         right: 0;
-        top: 10px;
+        top: 40px;
+        user-select: none;
+        &:hover {
+            color: #999;
+            cursor: pointer;
+        }
+        &:active {
+            color: #ccc;
+        }
+        &-icon {
+            font-size: .8em;
+        }
+        &-span {
+            font-weight: bold;
+        }
     }
     &--list {
         display: flex;

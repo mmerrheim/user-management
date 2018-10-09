@@ -1,20 +1,24 @@
 .IconButton {
     border: 2px solid black;
     color: black;
+    position: fixed;
     width: auto;
     display: flex;
     border-radius: 50%;
     transition: ease .3s;
     background-color: white;
+    transform: rotate(0deg);
     &-icon {
-        font-size: 1.5em;
-        padding: 5px;
+        font-size: 2em;
+        padding: 7px;
     }
     &:hover {
-        background-color: #eee;
         cursor: pointer;
+        transform: rotate(180deg);
+        box-shadow: -2px -2px 2px rgba(0, 0, 0, .2);
     }
     &:active {
-        background-color: #dddddd;
+        color: #ddd;
+        border-color: #ddd;
     }
 }

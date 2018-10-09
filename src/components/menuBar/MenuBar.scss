@@ -3,16 +3,14 @@
     &-list {
         margin:0;
         list-style-type: none;
-        padding: 0;
-        background-color: black;
+        background-color: #2D2E2E;
         color: white;
-        width: 250px;
+        width: 70px;
         height: 100%;
         position: fixed;
         text-align: center;
-        padding: 10px 0;
+        padding: 0;
         &--li {
-            border-bottom: 1px solid gray;
             &-logo {
                 width: 50%;
             }
@@ -21,16 +19,16 @@
                 color: white;
                 padding: 15px 0;
                 display:block;
-            }
-            &-link:hover {
-                background-color: rgba(50, 50, 50, 1.0);
+                &.active {
+                    background-color: #00a8ff;
+                }
             }
             &-link:active {
-                background-color: rgba(100, 100, 100, 1.0);
+                color: #00a8ff;
             }
         }
     }
     &-display {
-        padding:15px 50px 15px 300px;
+        padding:15px 50px 15px 130px;
     }
 }

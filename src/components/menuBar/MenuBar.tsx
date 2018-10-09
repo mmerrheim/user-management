@@ -1,14 +1,13 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 import Paper from '../common/Paper';
-import logo from '../../logo.svg';
-
 
 import './MenuBar.scss';
-import UserPage from '../page/userPage/UserPage';
 import ManageCollabs from '../page/manageCollabs/ManageCollabs';
 
 export default class MenuBar extends React.Component {
+
+    public update = () => this.forceUpdate();
 
     public render() {
         return (
@@ -16,21 +15,14 @@ export default class MenuBar extends React.Component {
                 <div className="MenuBar">
                     <ul className="MenuBar-list">
                         <li className="MenuBar-list--li">
-                            <img src={logo} className="MenuBar-list--li-logo" alt="logo" />
+                            <Link to="/" onClick={this.update} className={`MenuBar-list--li-link ${window.location.pathname === '/' ? "active" : ""}`}><i className="icon-home3 icon-x" /></Link>
                         </li>
                         <li className="MenuBar-list--li">
-                            <Link to="/" className="MenuBar-list--li-link"><i className="icon-home3" /> Home</Link>
-                        </li>
-                        <li className="MenuBar-list--li">
-                            <Link to="/create-collab" className="MenuBar-list--li-link"><i className="icon-user-plus" /> Create Collaborator</Link>
-                        </li>
-                        <li className="MenuBar-list--li">
-                            <Link to="/collabs" className="MenuBar-list--li-link"><i className="icon-users" /> Manage Collaborators</Link>
+                            <Link to="/collabs" onClick={this.update} className={`MenuBar-list--li-link ${window.location.pathname === '/collabs' ? "active" : ""}`}><i className="icon-users icon-x" /></Link>
                         </li>
                     </ul>
                     <div className="MenuBar-display">
                         <Route exact={true} path="/" component={Home} />
-                        <Route path="/create-collab" component={UserPage} />
                         <Route path="/collabs" component={ManageCollabs} />
                     </div>
                 </div>
